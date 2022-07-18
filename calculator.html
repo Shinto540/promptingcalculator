@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <div style="margin: 5px 0;">
+        <label for="num1">Number 1</label>
+        <input type="text" name="" id="num1">
+    </div>
+    <div style="margin: 10px 0;">
+        <label for="num2">Number 2</label>
+        <input type="text" name="" id="num2">
+    </div>
+    <div style="margin: 5px 0;">
+        <label for="total">Answer</label>
+        <input type="text" name="" id="total">
+    </div>
+    <div style="display: block;">
+        <button onclick="add()">Add</button>
+        <button onclick="minus()">Subtract</button>
+        <button onclick="product()">Multiply</button>
+        <button onclick="quotient()">Division</button>
+        <button onclick="remainder()">Remainder</button>
+        <button onclick="sin()">Sine</button>
+        <button onclick="cos()">Cosine</button>
+        <button onclick="tan()">Tangent</button>
+    </div>
+    <script type="text/javascript">
+        function add() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) + parseInt(b)
+        }
+
+        function minus() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) - parseInt(b)
+        }
+
+        function product() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) * parseInt(b)
+        }
+
+        function quotient() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) / parseInt(b)
+        }
+
+        function remainder() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) % parseInt(b)
+        }
+
+        function add() {
+            let a = document.getElementById('num1').value
+            let b = document.getElementById('num2').value
+
+            let total = document.getElementById('total')
+
+            total.value = parseInt(a) + parseInt(b)
+        }
+
+        function sin() {
+            let value = prompt("Enter a number")
+
+            alert((value === '' || parseInt(value) === NaN) ? "Please enter a valid number" : "Sine of " + value + " is " + Math.sin(parseInt(value) * (Math.PI / 180)))
+        }
+
+        function cos() {
+            let value = prompt("Enter a number")
+
+            alert((value === '' || parseInt(value) === NaN) ? "Please enter a valid number" : "Cosine of " + value + " is " + Math.cos(parseInt(value) * (Math.PI / 180)))
+        }
+
+        function tan() {
+            let value = prompt("Enter a number")
+
+            alert((value === '' || parseInt(value) === NaN) ? "Please enter a valid number" : "Tangent of " + value + " is " + Math.tan(parseInt(value) * (Math.PI / 180)))
+        }
+    </script>
+</body>
+
+</html>
